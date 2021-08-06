@@ -1,0 +1,14 @@
+ {% extends 'base.html' %}
+
+
+ {% block content %}
+<form class="" action="" method="post">
+{% csrf_token %}
+    <div class="border" style="border-radius:5px;   padding:15px ; background-color:white">
+
+   <a href="{%url 'fast_subscription:get_product'%}" class="btn btn-primary"> All Products</a>
+<br>
+    <a href="{%url 'fast_subscription:get_prod_by_ref'%}" class="btn btn-success">Product By Reference</a>
+    </div>
+</form>
+ {% endblock %}

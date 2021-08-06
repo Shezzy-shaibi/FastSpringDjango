@@ -1,0 +1,27 @@
+ {% extends 'base.html' %}
+
+
+ {% block content %}
+<form class="" action="" method="post">
+{% csrf_token %}
+    <div class="border" style="border-radius:5px;   padding:15px ; background-color:white">
+
+
+
+    <label for= "F_name" style="font-weight:bold">
+				     Reference ID
+				    </label><span  class="required">*</span>
+					<div class="form-field" id="F_name">
+
+						<input required class="input" type="text"  name="prod_ref" placeholder="enter your subscription reference id">
+
+                    </div>
+        {% if msg %}
+        <h5 class="my-2" style="color:red">{{msg}}</h5>
+{% endif %}
+    </div>
+<br>
+    <button class="btn btn-success">Get</button>
+
+</form>
+ {% endblock %}

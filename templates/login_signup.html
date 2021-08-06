@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Log In{% endblock %}
+
+{% block content %}
+<style>
+ input::placeholder{
+
+ font-size:15px;
+ }
+ input{
+ font-size:15px;
+
+ }
+label{
+
+ font-size:17px;
+ }
+ input[type=text]{
+margin:20px;
+ margin-left:0px;
+ margin-top:0px;
+
+placeholder: font-size:13px;
+
+ width:100%;
+ }
+ input[type=email]{
+ margin:20px;
+ margin-left:0px;
+ margin-top:0px;
+
+
+
+ width:100%;
+
+ radius:5px;
+ }input[type=password]{
+
+width:100%;
+
+ }
+
+label.required::after {
+    content: ' *';
+    color: red;
+}
+
+</style>
+
+<div class="container">
+  <div class="row">
+
+    {% if user.is_authenticated %}
+    <div class="col-12 py-5">
+        <p class="text-center alert alert-warning"><i class="fas fa-exclamation-circle"></i> you are already logged in</p>
+        <a href="{% url 'fast_subscription:home' %}" class="btn btn-default">Continue Shopping</a>
+    </div>
+    {% else %}
+
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mt-3">
+        <br>
+     <p class="h1-responsive   mb-3" style="font-size:25px;color:#007CC7;"><strong>Login</strong></p>
+     <br>
+      <div class="border rounded" style="padding:15px;">
+      <form method="post" action="{% url 'account_login' %}" class="myform p-3">
+
+       {% csrf_token %}
+          {{form1.as_p}}
+       <button type="submit" class="btn btn-success btn mt-4"><strong>Log in</strong></button>
+
+
+      </form>
+    </div>
+  </div>
+  <div class="col-12 col-sm-12 col-md-6 col-lg-6 mt-3 ">
+      <br>
+   <p class="h1-responsive   mb-3" style="font-size:25px; color:#007CC7;"><strong>Register</strong></p>
+   <br>
+    <div class="border rounded" style="padding:15px;">
+    <form method="post" class="myform p-3" action="/accounts/signup/" style="padding:10px;">
+
+
+      {% csrf_token %}
+ {{form2.as_p}}
+
+      <p class="mt-3" style="font-size:13px;">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.</p>
+      <button type="submit" class="mt-3 btn btn-success btn">Register</button>
+
+     </form>
+
+    </div>
+  </div>
+    {% endif %}
+  </div>
+</div>
+
+
+
+{% comment %}
+<h2>Log In</h2>
+<form method="post" action="{% url 'account_login' %}">
+
+  {{ form1.as_p }}
+{% csrf_token %}
+  <button type="submit">Log In</button>
+</form>
+
+
+<h2>Sign Up</h2>
+<form method="post" action="{% url 'account_signup' %}">
+
+
+  {{ form2.as_p }}
+      {% csrf_token %}
+</form>
+{% endcomment %}
+
+<br>
+<br>
+<p class="text-center" style="font-size:11px"><small>My account portal – Switch2VoIP</small></p>
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/58a1d39855c2fd09f8535e38/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+{% endblock %}

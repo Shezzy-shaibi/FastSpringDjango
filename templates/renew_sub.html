@@ -1,0 +1,25 @@
+ {% extends 'base.html' %}
+
+
+ {% block content %}
+<form class="" action="" method="post">
+{% csrf_token %}
+    <div class="border" style="border-radius:5px;   padding:15px ; background-color:white">
+
+
+
+    <label for= "F_name" style="font-weight:bold">
+				     Reference ID
+				    </label><span  class="required">*</span>
+					<div class="form-field" id="F_name">
+
+						<input required class="input" type="text"  name="ref_id" placeholder="enter your subscription reference id">
+
+                    </div>
+
+    </div>
+<br>
+    <button class="btn btn-success">renew</button>
+
+</form>
+ {% endblock %}

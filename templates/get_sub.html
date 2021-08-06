@@ -1,0 +1,44 @@
+ {% extends 'base.html' %}
+
+
+ {% block content %}
+<form class="" action="" method="post">
+{% csrf_token %}
+    <h1 style="color:grey">Search Subscription</h1>
+    <div class="border" style="border-radius:5px;   padding:15px ; background-color:white">
+
+
+
+    <label for= "F_name" style="font-weight:bold">
+				     Subscription ID
+				    </label><span  class="required">*</span>
+					<div class="form-field" id="F_name">
+
+						<input required class="input" type="text"  name="ref_id" placeholder=" product path ">
+
+                    </div>
+<br>
+        <label for= "cstm_ref" style="font-weight:bold">
+				     Product Path
+				    </label><span  class="required">*</span>
+					<div class="form-field" id="cstm_ref">
+
+						<input required class="input" type="text"  name="prod_path" placeholder="enter your customer reference id">
+
+                    </div>
+
+    </div>
+{%if msg%}
+    <p class="mt-2" style="color:red">{{msg}}</p>
+    {%endif%}
+
+<br>
+    <button class="btn btn-success">Get</button>
+   {%if msg%}
+
+    <a class="m-2 btn btn-primary" href="{%url 'fast_subscription:create_subscription'%}">Create Subscription</a>
+    {%endif%}
+
+
+</form>
+ {% endblock %}

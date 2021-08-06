@@ -1,0 +1,29 @@
+ {% extends 'base.html' %}
+
+
+ {% block content %}
+
+
+<h1 style="color:grey">Create Subscription</h1>
+<form action="" method="POST" id="form" name="myForm"  >
+					{% csrf_token %}
+
+
+<!-- <div class="col" style="">-->
+<h4 style=" my-2 color:grey">{{msg}}</h4>
+<div class="border" style="border-radius:5px;   padding:15px ; background-color:white">
+
+      <br>
+
+    {{form}}
+<br>
+
+<!--  <a class="btn btn-primary" href='#' data-fsc-action="Add,Checkout" data-fsc-item-path-value="hello">Create Subscription</a>-->
+<br>
+      <button class="my-2 btn btn-primary" type="submit">Create Subscription</button>
+</div>
+</form>
+
+
+
+ {% endblock %}
