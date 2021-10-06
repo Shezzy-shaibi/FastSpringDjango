@@ -139,13 +139,11 @@ USE_TZ = True
 
 
 # Client's Fastspring credentials
-API_USERNAME = "RWFIHGI_QBYSD--TZ6PZ-W"
-API_PASSWORD = "foaz5uHiQnC1dzSosO6W3A"
-
-STORE_ID = "netwol"
+ 
+STORE_ID = "<fastspring store id>"
 #
-# API_USERNAME = "R8KOAMUNTFK7POP3KFRQWA"
-# API_PASSWORD = "tz63nizpS3aTNfFcPf-upA"
+API_USERNAME = "<your fatsspring username>"
+API_PASSWORD = "<your fastspring pass>"
 
 #
 # FASTSPRING_STORE_LINK = "<YOUR STOREFRONT LINK>"
