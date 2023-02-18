@@ -3,18 +3,18 @@
 
 
 
-**1. Activate the environment**
+*1. Activate the environment**
 pipenv shell
 
-**2. Install requirements**
+*2. Install requirements**
 
 pip install requirements.txt
 
-**4. Migrate to the Admin**
+*3. Migrate the database changings**
 
 python3 manage.py migrate
 
-**3. Runserver in terminal**
+*4. Runserver in terminal**
 
 python3 manage.py runserver
 
@@ -31,7 +31,9 @@ FASTSPRING_STORE_LINK = "<YOUR POPUP STOREFRONT LINK>"
 in the bottom you will find 
 
 STORE_ID = "<YOUR STORE ID>"
+
 API_USERNAME = "<API USERNAME>"
+
 API_PASSWORD = "API_PASSWORD"
 
  
